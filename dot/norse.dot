@@ -1,0 +1,259 @@
+digraph norse {
+  ratio=0.619
+  node [style=filled]
+
+  ymir;
+
+  licked_free_from_ice [shape=diamond];
+  buri;
+  licked_free_from_ice -> buri;
+
+  buri_unknown_process [shape=diamond];
+  borr;
+  buri -> buri_unknown_process;
+  buri_unknown_process -> borr;
+
+  mundilfari;
+
+  mundilfari_unknown_process [shape=diamond];
+  mani;
+  sol;
+  mundilfari -> mundilfari_unknown_process;
+  mundilfari_unknown_process -> mani;
+  mundilfari_unknown_process -> sol;
+
+  annar;
+  nott;
+  dellingr;
+
+  dellingr_nott_union [shape=diamond];
+  dagr;
+  dellingr -> dellingr_nott_union;
+  nott -> dellingr_nott_union;
+  dellingr_nott_union -> dagr;
+
+  annar_nott_union [shape=diamond];
+  jord;
+  annar -> annar_nott_union;
+  nott -> annar_nott_union;
+  annar_nott_union -> jord;
+
+  bolthorn;
+
+  bolthorn_unknown_union [shape=diamond];
+  bestla;
+  mimir;
+  bolthorn -> bolthorn_unknown_union;
+  bolthorn_unknown_union -> bestla;
+  bolthorn_unknown_union -> mimir;
+
+  borr_bestla_union [shape=diamond];
+  odin;
+  ve;
+  vili;
+  borr -> borr_bestla_union;
+  bestla -> borr_bestla_union;
+  borr_bestla_union -> odin;
+  borr_bestla_union -> ve;
+  borr_bestla_union -> vili;
+
+  frigg;
+  hymir;
+
+  hymir_unknown_union [shape=diamond];
+  tyr;
+  hymir -> hymir_unknown_union;
+  hymir_unknown_union -> tyr;
+
+  odin_frigg_union [shape=diamond];
+  baldr;
+  odin -> odin_frigg_union;
+  frigg -> odin_frigg_union;
+  odin_frigg_union -> baldr;
+
+  odin_jord_union [shape=diamond];
+  thor;
+  odin -> odin_jord_union;
+  jord -> odin_jord_union;
+  odin_jord_union -> thor;
+
+  nep;
+
+  nep_unknown_union [shape=diamond];
+  nanna;
+  nep -> nep_unknown_union;
+  nep_unknown_union -> nanna;
+
+  baldr_nanna_union [shape=diamond];
+  forseti;
+  baldr -> baldr_nanna_union;
+  nanna -> baldr_nanna_union;
+  baldr_nanna_union -> forseti;
+
+  sif;
+
+  thor_sif_union [shape=diamond];
+  thrud;
+  thor -> thor_sif_union;
+  sif -> thor_sif_union;
+  thor_sif_union -> thrud;
+
+  thor_jarnsaxa_union [shape=diamond];
+  magni;
+  thor -> thor_jarnsaxa_union;
+  jarnsaxa -> thor_jarnsaxa_union;
+  thor_jarnsaxa_union -> magni;
+
+  njord;
+  njorun;
+
+  njord_njorun_union [shape=diamond];
+  freyja;
+  freyr;
+  njord -> njord_njorun_union;
+  njorun -> njord_njorun_union;
+  njord_njorun_union -> freyja;
+  njord_njorun_union -> freyr;
+
+  odr_freyja_union [shape=diamond];
+  hnoss;
+  gersemi;
+  odr -> odr_freyja_union;
+  freyja -> odr_freyja_union;
+  odr_freyja_union -> hnoss;
+  odr_freyja_union -> gersemi;
+
+  farbauti;
+  laufey;
+
+  farbauti_laufey_union [shape=diamond];
+  loki;
+  helblindi;
+  byleistr;
+  farbauti -> farbauti_laufey_union;
+  laufey -> farbauti_laufey_union;
+  farbauti_laufey_union -> loki;
+  farbauti_laufey_union -> helblindi;
+  farbauti_laufey_union -> byleistr;
+
+  sigyn;
+
+  loki_sigyn_union [shape=diamond];
+  narfi;
+  vali;
+  loki -> loki_sigyn_union;
+  sigyn -> loki_sigyn_union;
+  loki_sigyn_union -> narfi;
+  loki_sigyn_union -> vali;
+
+  angrboda;
+
+  loki_angrboda_union [shape=diamond];
+  loki -> loki_angrboda_union;
+  angrboda -> loki_angrboda_union;
+  loki_angrboda_union -> hel;
+  loki_angrboda_union -> fenrir;
+  loki_angrboda_union -> jormungandr;
+
+  angeyja;
+  atla;
+  eistla;
+  eyrgjafa;
+  gjalp;
+  greip;
+  imor;
+  jarnsaxa;
+  ulfrun;
+
+  nine_mothers_union [shape=diamond];
+  heimdall;
+  angeyja -> nine_mothers_union;
+  atla -> nine_mothers_union;
+  eistla -> nine_mothers_union;
+  eyrgjafa -> nine_mothers_union;
+  gjalp -> nine_mothers_union;
+  greip -> nine_mothers_union;
+  imor -> nine_mothers_union;
+  jarnsaxa -> nine_mothers_union;
+  ulfrun -> nine_mothers_union;
+  nine_mothers_union -> heimdall;
+
+  ullr;
+  volundr;
+  alvaldi;
+
+  alvaldi_unknown_union [shape=diamond];
+  thiazi;
+  idi;
+  grangr;
+  alvaldi -> alvaldi_unknown_union;
+  alvaldi_unknown_union -> thiazi;
+  alvaldi_unknown_union -> idi;
+  alvaldi_unknown_union -> grangr;
+
+  thiazi_unknown_union [shape=diamond];
+  skadi;
+  thiazi -> thiazi_unknown_union;
+  thiazi_unknown_union -> skadi;
+
+  ran;
+  aegir;
+
+  aurboda;
+  aegir_aurboda_union [shape=diamond];
+  gerdr;
+  aegir -> aegir_aurboda_union;
+  aurboda -> aegir_aurboda_union;
+  aegir_aurboda_union -> gerdr;
+  
+  freyr_gerdr_union [shape=diamond];
+  fjolnir;
+  freyr -> freyr_gerdr_union;
+  gerdr -> freyr_gerdr_union;
+  freyr_gerdr_union -> fjolnir;
+
+  aegir_ran_union [shape=diamond];
+  blodughadda;
+  bylgja;
+  drofn;
+  dufa;
+  hefring;
+  himinglaeva;
+  hronn;
+  kolga;
+  udr;
+  aegir -> aegir_ran_union;
+  ran -> aegir_ran_union;
+  aegir_ran_union -> blodughadda;
+  aegir_ran_union -> bylgja;
+  aegir_ran_union -> drofn;
+  aegir_ran_union -> dufa;
+  aegir_ran_union -> hefring;
+  aegir_ran_union -> himinglaeva;
+  aegir_ran_union -> hronn;
+  aegir_ran_union -> kolga;
+  aegir_ran_union -> udr;
+
+  odin_unknown2_union [shape=diamond];
+  odin -> odin_unknown2_union;
+  odin_unknown2_union -> sigi;
+
+  sigi_unknown_union [shape=diamond];
+  sigi -> sigi_unknown_union;
+  sigi_unknown_union -> rerir;
+
+  rerir_unknown_union [shape=diamond];
+  rerir -> rerir_unknown_union;
+  volsung;
+  rerir_unknown_union -> volsung;
+
+  hljod;
+
+  volsung_hljod_union [shape=diamond];
+  sigmund;
+  signy;
+  volsung -> volsung_hljod_union;
+  hljod -> volsung_hljod_union;
+  volsung_hljod_union -> sigmund;
+  volsung_hljod_union -> signy;
+}
