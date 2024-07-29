@@ -152,4 +152,12 @@ digraph irish {
   dian_cecht_unknown1_union -> cian;
   dian_cecht_unknown1_union -> miach;
 
+  deichtine;
+
+  lugh_deichtine_union;
+  cu_chulainn;
+  lugh -> lugh_deichtine_union;
+  deichtine -> lugh_deichtine_union;
+  lugh_deichtine_union -> cu_chulainn;
+
 }
