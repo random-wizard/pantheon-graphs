@@ -1,0 +1,185 @@
+digraph greek {
+  ratio=0.619;
+  node [style=filled];
+
+  #remove zzz to pull together the 12 olympians
+  subgraph zzzcluster_olympians {
+    aphrodite;
+    hera;
+    hestia;
+    demeter;
+    poseidon;
+    zeus;
+    hephaestus;
+    ares;
+    apollo;
+    artemis;
+    athena;
+    hermes;
+  }
+
+  gaia;
+
+  ouranos_virgin_birth [shape=diamond];
+  ouranos;
+  gaia -> ouranos_virgin_birth;
+  ouranos_virgin_birth -> ouranos;
+
+  gaia_ouranos_union [shape=diamond];
+  oceanus;
+  tethys;
+  hyperion;
+  theia;
+  coeus;
+  phoebe;
+  cronus;
+  rhea;
+  mnemosyne;
+  themis;
+  crius;
+  iapetus;
+  gaia -> gaia_ouranos_union;
+  ouranos -> gaia_ouranos_union;
+  gaia_ouranos_union -> oceanus;
+  gaia_ouranos_union -> tethys;
+  gaia_ouranos_union -> hyperion;
+  gaia_ouranos_union -> theia;
+  gaia_ouranos_union -> coeus;
+  gaia_ouranos_union -> phoebe;
+  gaia_ouranos_union -> cronus;
+  gaia_ouranos_union -> rhea;
+  gaia_ouranos_union -> mnemosyne;
+  gaia_ouranos_union -> themis;
+  gaia_ouranos_union -> crius;
+  gaia_ouranos_union -> iapetus;
+
+  oceanus_tethys_union [shape=diamond];
+  metis;
+  clymene;
+  aethra;
+  oceanus -> oceanus_tethys_union;
+  tethys -> oceanus_tethys_union;
+  oceanus_tethys_union -> metis;
+  oceanus_tethys_union -> clymene;
+  oceanus_tethys_union -> aethra;
+
+  iapetus_clymene_union [shape=diamond];
+  atlas;
+  iapetus -> iapetus_clymene_union;
+  clymene -> iapetus_clymene_union;
+  iapetus_clymene_union -> atlas;
+
+  atlas_aethra_union [shape=diamond];
+  maia;
+  electra;
+  taygete;
+  alcyone;
+  celaeno;
+  sterope;
+  merope;
+  atlas -> atlas_aethra_union;
+  aethra -> atlas_aethra_union;
+  atlas_aethra_union -> maia;
+  atlas_aethra_union -> electra;
+  atlas_aethra_union -> taygete;
+  atlas_aethra_union -> alcyone;
+  atlas_aethra_union -> celaeno;
+  atlas_aethra_union -> sterope;
+  atlas_aethra_union -> merope;
+
+  coeus_phoebe_union [shape=diamond];
+  coeus -> coeus_phoebe_union;
+  phoebe -> coeus_phoebe_union;
+  coeus_phoebe_union -> leto;
+
+  ouranos_seed [shape=diamond];
+  ouranos -> ouranos_seed;
+  aphrodite [color="#ff66cc"];
+  ouranos_seed -> aphrodite;
+
+  cronus_rhea_union [shape=diamond];
+  poseidon [color="#ff66cc"];
+  hades;
+  hestia [color="#ff66cc"];
+  demeter [color="#ff66cc"];
+  hera [color="#ff66cc"];
+  zeus [color="#ff66cc"];
+  cronus -> cronus_rhea_union;
+  rhea -> cronus_rhea_union;
+  cronus_rhea_union -> hestia;
+  cronus_rhea_union -> demeter;
+  cronus_rhea_union -> hades;
+  cronus_rhea_union -> poseidon;
+  cronus_rhea_union -> hera;
+  cronus_rhea_union -> zeus;
+
+  zeus_metis_union [shape=diamond];
+  zeus -> zeus_metis_union;
+  metis -> zeus_metis_union;
+
+  zeus_forehead [shape=diamond];
+  zeus_metis_union -> zeus_forehead;
+  athena [color="#ff66cc"];
+  zeus_forehead -> athena;
+
+  zeus_hera_union [shape=diamond];
+  ares [color="#ff66cc"];
+  hephaestus [color="#ff66cc"];
+  zeus -> zeus_hera_union;
+  hera -> zeus_hera_union;
+  zeus_hera_union -> ares;
+  zeus_hera_union -> hephaestus;
+
+  zeus_leto_union [shape=diamond];
+  artemis [color="#ff66cc"];
+  apollo [color="#ff66cc"];
+  zeus -> zeus_leto_union;
+  leto -> zeus_leto_union;
+  zeus_leto_union -> artemis;
+  zeus_leto_union -> apollo;
+
+  zeus_demeter_union [shape=diamond];
+  zeus -> zeus_demeter_union;
+  demeter -> zeus_demeter_union;
+  peresphone;
+  zeus_demeter_union -> peresphone;
+
+  hephaestus_aphrodite_union [shape=diamond];
+  hephaestus -> hephaestus_aphrodite_union;
+  aphrodite -> hephaestus_aphrodite_union;
+
+  hades_peresphone_union [shape=diamond];
+  hades -> hades_peresphone_union;
+  peresphone -> hades_peresphone_union;
+
+  zeus_maia_union [shape=diamond];
+  hermes [color="#ff66cc"];
+  zeus -> zeus_maia_union;
+  maia -> zeus_maia_union;
+  zeus_maia_union -> hermes;
+
+  zeus_danae_union [shape=diamond];
+  perseus;
+  zeus -> zeus_danae_union;
+  danae -> zeus_danae_union;
+  zeus_danae_union -> perseus;
+
+  perseus_andromeda_union [shape=diamond];
+  electryon;
+  perseus -> perseus_andromeda_union;
+  andromeda -> perseus_andromeda_union;
+  perseus_andromeda_union -> electryon;
+
+  electryon_anaxo_union [shape=diamond];
+  alcmene;
+  electryon -> electryon_anaxo_union;
+  anaxo -> electryon_anaxo_union;
+  electryon_anaxo_union -> alcmene;
+
+  zeus_alcmene_union [shape=diamond];
+  hercules;
+  zeus -> zeus_alcmene_union;
+  alcmene -> zeus_alcmene_union;
+  zeus_alcmene_union -> hercules;
+
+}
