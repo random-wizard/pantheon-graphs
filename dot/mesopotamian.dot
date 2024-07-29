@@ -1,0 +1,146 @@
+digraph akkadian {
+  ratio=0.619
+  node [style=filled]
+
+  #remove zzz to group the seven gods who decree
+  subgraph zzzcluster_seven_gods_who_decree {
+    anu;
+    enlil;
+    enki;
+    ninhursag;
+    subgraph zzzcluster_three_sky_gods {
+      inanna;
+      nanna;
+      utu;
+    }
+  }
+
+
+
+  tiamat;
+  apsu;
+  mummu;
+
+  tiamat_apsu_union [shape=diamond];
+  lahmu;
+  lahamu;
+  tiamat -> tiamat_apsu_union;
+  apsu -> tiamat_apsu_union;
+  tiamat_apsu_union -> lahamu;
+  tiamat_apsu_union -> lahmu;
+
+  lahmu_lahamu_union [shape=diamond];
+  anshar;
+  kishar;
+  lahmu -> lahmu_lahamu_union;
+  lahamu -> lahmu_lahamu_union;
+  lahmu_lahamu_union -> anshar;
+  lahmu_lahamu_union -> kishar;
+
+  anshar_kishar_union [shape=diamond];
+  anu [fillcolor="#fffac8"];
+  ki;
+  anshar -> anshar_kishar_union;
+  kishar -> anshar_kishar_union;
+  anshar_kishar_union -> anu;
+  anshar_kishar_union -> ki;
+
+  anu_ki_union [shape=diamond];
+  enlil [fillcolor="#fffac8"];
+  nisaba;
+  anu -> anu_ki_union;
+  ki -> anu_ki_union;
+  anu_ki_union -> enlil;
+  anu_ki_union -> nisaba;
+
+  haya;
+
+  haya_nisaba_union [shape=diamond];
+  ninlil;
+  haya -> haya_nisaba_union;
+  nisaba -> haya_nisaba_union;
+  haya_nisaba_union -> ninlil;
+
+  enlil_ninlil_union [shape=diamond];
+  nergal;
+  nanna [fillcolor="#fffac8"];
+  ninurta;
+  enlil -> enlil_ninlil_union;
+  ninlil -> enlil_ninlil_union;
+  enlil_ninlil_union -> nergal;
+  enlil_ninlil_union -> nanna;
+  enlil_ninlil_union -> ninurta;
+
+  anu_nammu_union [shape=diamond];
+  enki [fillcolor="#fffac8"];
+  anu -> anu_nammu_union;
+  nammu -> anu_nammu_union;
+  anu_nammu_union -> enki;
+
+  uras;
+
+  anu_uras_union [shape=diamond];
+  ninsumun;
+  anu -> anu_uras_union;
+  uras -> anu_uras_union;
+  anu_uras_union -> ninsumun;
+
+  lugalbanda;
+
+  lugalbanda_ninsumun_union [shape=diamond];
+  gilgamesh;
+  lugalbanda -> lugalbanda_ninsumun_union;
+  ninsumun -> lugalbanda_ninsumun_union;
+  lugalbanda_ninsumun_union -> gilgamesh;
+
+  ninhursag [fillcolor="#fffac8"];
+
+  enlil_ninhursag_union [shape=diamond];
+  ninurta;
+  enlil -> enlil_ninhursag_union;
+  ninhursag -> enlil_ninhursag_union;
+  enlil_ninhursag_union -> ninurta;
+
+  ningikuga;
+
+  enki_ningikuga_union [shape=diamond];
+  ningal;
+  enki -> enki_ningikuga_union;
+  ningikuga -> enki_ningikuga_union;
+  enki_ningikuga_union -> ningal;
+
+  damgalnuna;
+
+  enki_damgalnuna_union [shape=diamond];
+  marduk;
+  enki -> enki_damgalnuna_union;
+  damgalnuna -> enki_damgalnuna_union;
+  enki_damgalnuna_union -> marduk;
+
+  nanna_ningal_union [shape=diamond];
+  utu [fillcolor="#fffac8"];
+  inanna [fillcolor="#fffac8"];
+  nanna -> nanna_ningal_union;
+  ningal -> nanna_ningal_union;
+  nanna_ningal_union -> utu;
+  nanna_ningal_union -> inanna;
+
+  aya;
+
+  utu_aya_union [shape=diamond];
+  mamu;
+  kittum;
+  sisig;
+  zaqar;
+  sumugan;
+  ishum;
+  utu -> utu_aya_union;
+  aya -> utu_aya_union;
+  utu_aya_union -> mamu;
+  utu_aya_union -> kittum;
+  utu_aya_union -> sisig;
+  utu_aya_union -> zaqar;
+  utu_aya_union -> sumugan;
+  utu_aya_union -> ishum;
+
+}
