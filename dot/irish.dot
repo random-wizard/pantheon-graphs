@@ -1,0 +1,155 @@
+digraph irish {
+  ratio=0.619;
+  node [style=filled];
+
+  neit;
+  nemain;
+
+  neit_nemain_union[shape=diamond];
+  delbaeth;
+  esarg;
+  neit_unknown_progeny;
+  neit -> neit_nemain_union;
+  nemain -> neit_nemain_union;
+  neit_nemain_union -> delbaeth;
+  neit_nemain_union -> esarg;
+  neit_nemain_union -> neit_unknown_progeny;
+
+  neit_unknown_progeny -> balor;
+
+  balor;
+  cethlenn;
+
+  balor_cethlenn_union [shape=diamond];
+  ethniu;
+  balor -> balor_cethlenn_union;
+  cethlenn -> balor_cethlenn_union;
+  balor_cethlenn_union -> ethniu;
+
+  elatha;
+  danu;
+  ethniu;
+  eriu;
+  etain;
+
+  elatha_danu_union [shape=diamond];
+  dagda [color="#a0a000"];
+  elatha -> elatha_danu_union;
+  danu -> elatha_danu_union;
+  elatha_danu_union -> dagda;
+
+  elatha_ethniu_union [shape=diamond];
+  ogma [color="#a0a000"];
+  elatha -> elatha_ethniu_union;
+  ethniu -> elatha_ethniu_union;
+  elatha_ethniu_union -> ogma;
+
+  elatha_eriu_union [shape=diamond];
+  eochaid;
+  elatha -> elatha_eriu_union;
+  eriu -> elatha_eriu_union;
+  elatha_eriu_union -> eochaid;
+
+  elatha_etain_union [shape=diamond];
+  elatha -> elatha_etain_union;
+  etain -> elatha_etain_union;
+
+  elatha_unknown1_union [shape=diamond];
+  elloth;
+  elatha -> elatha_unknown1_union;
+  elatha_unknown1_union -> elloth;
+
+  elloth_unknown1_union [shape=diamond];
+  manaan [color="#a0a000"];
+  elloth -> elloth_unknown1_union;
+  elloth_unknown1_union -> manaan;
+
+  cian;
+
+  cian_ethniu_union [shape=diamond];
+  lugh [color="#a0a000"];
+  cian -> cian_ethniu_union;
+  ethniu -> cian_ethniu_union;
+  cian_ethniu_union -> lugh;
+
+  boann;
+
+  dagda_boann_union [shape=diamond];
+  aengus [color="#a0a000"];
+  dagda -> dagda_boann_union;
+  boann -> dagda_boann_union;
+  dagda_boann_union -> aengus;
+
+  dagda_unknown1_union [shape=diamond];
+  brigid [color="#a0a000"];
+  dagda -> dagda_unknown1_union;
+  dagda_unknown1_union -> brigid;
+
+  ernmas;
+
+  delbaeth_ernmas_union [shape=diamond];
+  fiacha;
+  fodla;
+  banba;
+  eriu;
+  delbaeth -> delbaeth_ernmas_union;
+  ernmas -> delbaeth_ernmas_union;
+  delbaeth_ernmas_union -> fiacha;
+  delbaeth_ernmas_union -> fodla;
+  delbaeth_ernmas_union -> banba;
+  delbaeth_ernmas_union -> eriu;
+
+  fiacha_ernmas_union [shape=diamond];
+  fiacha -> fiacha_ernmas_union;
+  ernmas -> fiacha_ernmas_union;
+
+  ernmas_unknown1_union [shape=diamond];
+  morrigan  [color="#a0a000"];
+  badb;
+  macha;
+  ernmas -> ernmas_unknown1_union;
+  ernmas_unknown1_union -> morrigan;
+  ernmas_unknown1_union -> badb;
+  ernmas_unknown1_union -> macha;
+
+  ernmas_unknown2_union [shape=diamond];
+  ernmas -> ernmas_unknown2_union;
+  ernmas_unknown2_union -> glonn;
+  ernmas_unknown2_union -> gnim;
+  ernmas_unknown2_union -> coscar;
+
+  eochaid_brigid_union [shape=diamond];
+  ruadan;
+  eochaid -> eochaid_brigid_union;
+  brigid -> eochaid_brigid_union;
+  eochaid_brigid_union -> ruadan;
+
+
+  dagda_unknown2_union [shape=diamond];
+  bodb_derg;
+  dagda -> dagda_unknown2_union;
+  dagda_unknown2_union -> bodb_derg;
+
+
+
+  dagda_unknown3_union [shape=diamond];
+  dian_cecht [color="#a0a000"];
+  nuada [color="#a0a000"];
+  goibniu [color="#a0a000"];
+  dagda -> dagda_unknown3_union;
+  dagda_unknown3_union -> dian_cecht;
+  dagda_unknown3_union -> nuada;
+  dagda_unknown3_union -> goibniu;
+
+  dian_cecht_unknown1_union [shape=diamond];
+  cu;
+  cethen;
+  cian;
+  miach;
+  dian_cecht -> dian_cecht_unknown1_union;
+  dian_cecht_unknown1_union -> cu;
+  dian_cecht_unknown1_union -> cethen;
+  dian_cecht_unknown1_union -> cian;
+  dian_cecht_unknown1_union -> miach;
+
+}
