@@ -48,7 +48,7 @@ digraph norse {
   bolthorn_unknown_union -> mimir;
 
   borr_bestla_union [shape=diamond];
-  odin;
+  odin [fillcolor="#cff2ff"];
   ve;
   vili;
   borr -> borr_bestla_union;
@@ -72,7 +72,7 @@ digraph norse {
   odin_frigg_union -> baldr;
 
   odin_jord_union [shape=diamond];
-  thor;
+  thor [fillcolor="#cff2ff"];
   odin -> odin_jord_union;
   jord -> odin_jord_union;
   odin_jord_union -> thor;
@@ -108,7 +108,7 @@ digraph norse {
   njorun;
 
   njord_njorun_union [shape=diamond];
-  freyja;
+  freyja [fillcolor="#cff2ff"];
   freyr;
   njord -> njord_njorun_union;
   njorun -> njord_njorun_union;
@@ -127,7 +127,7 @@ digraph norse {
   laufey;
 
   farbauti_laufey_union [shape=diamond];
-  loki;
+  loki [fillcolor="#cff2ff"];
   helblindi;
   byleistr;
   farbauti -> farbauti_laufey_union;
